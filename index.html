@@ -2,25 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Random Image</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Halloween!</title>
+</head>
+<body>
+
+<img id="randomImage" alt="Random Image" style="width:100%; max-width:400px;">
+
 <script>
+  // Array of image URLs
   const images = [
     'https://ibb.co/2n1937T',
     'https://ibb.co/nrffRQB',
     'https://ibb.co/RQjW4M8',
     'https://ibb.co/C1SLJ1x',
     'https://ibb.co/NKBCJSv',
-    // ... add URLs for all your images
   ];
 
-  function showRandomImage() {
+  // Function to get a random image
+  function getRandomImage() {
     const randomIndex = Math.floor(Math.random() * images.length);
-    const imgElement = document.getElementById('randomImage');
-    imgElement.src = images[randomIndex];
+    return images[randomIndex];
   }
+
+  // Set the src attribute of the img element to a random image
+  document.getElementById('randomImage').src = getRandomImage();
 </script>
-</head>
-<body onload="showRandomImage()">
-  <img id="randomImage" alt="Random Image">
+
 </body>
 </html>
