@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Random Image</title>
+<script>
+  const images = [
+    'https://ibb.co/2n1937T',
+    'https://ibb.co/nrffRQB',
+    'https://ibb.co/RQjW4M8',
+    'https://ibb.co/C1SLJ1x',
+    'https://ibb.co/NKBCJSv',
+    // ... add URLs for all your images
+  ];
+
+  function showRandomImage() {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const imgElement = document.getElementById('randomImage');
+    imgElement.src = images[randomIndex];
+  }
+</script>
+</head>
+<body onload="showRandomImage()">
+  <img id="randomImage" alt="Random Image">
+</body>
+</html>
